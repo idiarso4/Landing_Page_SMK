@@ -1,0 +1,112 @@
+.org-slider-section {
+    position: relative;
+    width: 100%;
+    padding: 4rem 2rem;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.org-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.org-slider-header {
+    margin-bottom: 3rem;
+}
+
+.org-slider-header h2 {
+    font-size: 2.5rem;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.org-slider-header p {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.org-slider {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.org-slide {
+    width: 25%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.org-logo {
+    width: 150px;
+    height: 150px;
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.org-logo:hover {
+    transform: translateY(-5px);
+}
+
+.org-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.org-logo span {
+    font-size: 0.9rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.org-slider-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.org-slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.org-slider-dot.active {
+    background: #3b82f6;
+}
+
+@media (max-width: 768px) {
+    .org-slide {
+        gap: 1rem;
+    }
+    
+    .org-logo {
+        width: 120px;
+        height: 120px;
+        padding: 1rem;
+    }
+    
+    .org-logo img {
+        width: 60px;
+        height: 60px;
+    }
+}

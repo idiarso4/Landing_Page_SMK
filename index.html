@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filament - Modern Admin Panel Framework</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="organization-slider.css">
+    <link rel="stylesheet" href="extracurricular.css">
+    <link rel="stylesheet" href="extracurricular-pagination.css">
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        .pagination-button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e5e7eb;
+            background: white;
+            color: #374151;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .pagination-button:hover {
+            background: #f3f4f6;
+        }
+        .pagination-button.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <div class="school-logo">🏫</div>
+                <div class="school-info">
+                    <h1>SMKN 1 Punggelan</h1>
+                    <p>Unggul dalam Karakter dan Kompetensi</p>
+                </div>
+            </div>
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="#program">Program Keahlian</a>
+                    <div class="dropdown-content">
+                        <a href="#tkj">Teknik Komputer dan Jaringan</a>
+                        <a href="#tkr">Teknik Kendaraan Ringan</a>
+                        <a href="#tsm">Teknik Sepeda Motor</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#facilities">Fasilitas</a>
+                    <div class="dropdown-content">
+                        <a href="#lab">Laboratorium</a>
+                        <a href="#workshop">Workshop TEFA</a>
+                        <a href="#library">Perpustakaan</a>
+                    </div>
+                </div>
+                <a href="#achievements">Prestasi</a>
+                <a href="#contact">Hubungi Kami</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider-section">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://smkn1punggelan.sch.id/assets/images/uploads/144/WhatsApp%20Image%202023-12-13%20at%2013.35.39.jpeg" alt="SMKN 1 Punggelan TEFA Workshop">
+                    <div class="slide-content">
+                        <h2>Teaching Factory Excellence</h2>
+                        <p>State-of-the-art facilities for hands-on learning experience</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://smkn1punggelan.sch.id/assets/images/uploads/144/WhatsApp%20Image%202023-12-13%20at%2013.35.40.jpeg" alt="Student Activities">
+                    <div class="slide-content">
+                        <h2>Student Development</h2>
+                        <p>Comprehensive programs for student growth and excellence</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://smkn1punggelan.sch.id/assets/images/uploads/144/WhatsApp%20Image%202023-12-13%20at%2013.35.41.jpeg" alt="Industry Partnerships">
+                    <div class="slide-content">
+                        <h2>Industry Collaboration</h2>
+                        <p>Strong partnerships with leading industries for student success</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://smkn1punggelan.sch.id/assets/images/uploads/144/WhatsApp%20Image%202023-12-13%20at%2013.35.42.jpeg" alt="School Facilities">
+                    <div class="slide-content">
+                        <h2>Modern Facilities</h2>
+                        <p>Well-equipped learning environments for optimal education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="slider-dot active"></div>
+                <div class="slider-dot"></div>
+                <div class="slider-dot"></div>
+                <div class="slider-dot"></div>
+            </div>
+        </section>
+
+        <section class="school-info">
+            <div class="school-info-container">
+                <div class="school-info-header">
+                    <h2>SMKN 1 Punggelan</h2>
+                    <p>Leading Vocational Education in Banjarnegara</p>
+                </div>
+                <div class="school-info-grid">
+                    <div class="info-card">
+                        <h3>Visi</h3>
+                        <p>Menjadi SMK unggul yang menghasilkan lulusan berkarakter, kompeten, dan siap kerja di era global</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Program Keahlian</h3>
+                        <p>Menawarkan berbagai program keahlian termasuk Teknik Komputer dan Jaringan, Teknik Kendaraan Ringan, dan Teknik Sepeda Motor</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Fasilitas</h3>
+                        <p>Dilengkapi dengan bengkel praktik modern, laboratorium komputer, dan Teaching Factory untuk pengalaman belajar optimal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Total Siswa PKL</p>
+                </div>
+                <div class="stat-icon">👨‍🎓</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Total Jurnal</p>
+                </div>
+                <div class="stat-icon">📝</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Jurnal Pending</p>
+                </div>
+                <div class="stat-icon">⏳</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>42</h3>
+                    <p>Total Kelas</p>
+                </div>
+                <div class="stat-icon">🏫</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>1467</h3>
+                    <p>Total Siswa</p>
+                </div>
+                <div class="stat-icon">👥</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Total Pertemuan</p>
+                </div>
+                <div class="stat-icon">📅</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Total Penilaian</p>
+                </div>
+                <div class="stat-icon">📊</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0</h3>
+                    <p>Penilaian Hari Ini</p>
+                </div>
+                <div class="stat-icon">✅</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>0.00</h3>
+                    <p>Rata-rata Nilai</p>
+                </div>
+                <div class="stat-icon">📈</div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Build Beautiful Admin Panels with Filament</h1>
+                <p>The elegant TALL stack admin panel for Laravel artisans</p>
+                <div class="cta-buttons">
+                    <a href="#get-started" class="btn primary">Get Started</a>
+                    <a href="#demo" class="btn secondary">View Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="extracurricular" id="extracurricular">
+            <div class="extracurricular-container">
+                <div class="extracurricular-header">
+                    <h2>Extracurricular Activities</h2>
+                    <p>Discover our diverse range of extracurricular activities designed to develop students' talents and interests</p>
+                </div>
+                <div class="extracurricular-grid">
+                    <h3 class="category-title">Leadership & Character Development</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">⛺</div>
+                        <h3>Pramuka Peminatan</h3>
+                        <p>Specialized Scouting program focusing on leadership and outdoor skills</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏕️</div>
+                        <h3>Pramuka Aktualisasi</h3>
+                        <p>Applied Scouting activities for practical skill development</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">👮</div>
+                        <h3>PKS dan Pleton Inti</h3>
+                        <p>School Security Patrol and Core Platoon for discipline training</p>
+                    </div>
+
+                    <h3 class="category-title">Academic & Professional Skills</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">📊</div>
+                        <h3>Accounting Community</h3>
+                        <p>Learn and practice accounting principles with fellow enthusiasts</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🌏</div>
+                        <h3>English Club</h3>
+                        <p>Improve English language skills through interactive activities</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">📰</div>
+                        <h3>Mading dan KIR</h3>
+                        <p>Wall Magazine and Scientific Research for creative expression</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">💼</div>
+                        <h3>Kewirausahaan</h3>
+                        <p>Entrepreneurship training for business-minded students</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">💻</div>
+                        <h3>Komputer</h3>
+                        <p>Computer and technology skills development</p>
+                    </div>
+
+                    <h3 class="category-title">Arts & Culture</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎨</div>
+                        <h3>Seni Rupa Melukis</h3>
+                        <p>Visual arts and painting for artistic expression</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">💃</div>
+                        <h3>Seni Tari</h3>
+                        <p>Traditional and modern dance performances</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎤</div>
+                        <h3>Seni Vokal</h3>
+                        <p>Vocal training and performance opportunities</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎸</div>
+                        <h3>Seni Musik</h3>
+                        <p>Music education and ensemble performances</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎬</div>
+                        <h3>Perfilman</h3>
+                        <p>Film production and cinematography skills</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎭</div>
+                        <h3>Teater</h3>
+                        <p>Theater arts and dramatic performances</p>
+                    </div>
+
+                    <h3 class="category-title">Teaching Factory & Industry Collaboration</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏭</div>
+                        <h3>ATMI Teaching Factory</h3>
+                        <p>Hands-on training in industry-standard manufacturing processes in collaboration with Politeknik ATMI</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🔧</div>
+                        <h3>Industry Skills Workshop</h3>
+                        <p>Professional skills development through PT ATMI Bizdec Surakarta's expertise in manufacturing technology</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">📈</div>
+                        <h3>Business Development</h3>
+                        <p>Learn business strategies and market analysis through real industry projects</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🤝</div>
+                        <h3>Industry Networking</h3>
+                        <p>Build connections with industry professionals and explore career opportunities</p>
+                    </div>
+
+                    <h3 class="category-title">Sports & Physical Activities</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">🥋</div>
+                        <h3>Karate</h3>
+                        <p>Martial arts training for self-defense and discipline</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏃</div>
+                        <h3>Atletik</h3>
+                        <p>Track and field athletics training</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏀</div>
+                        <h3>Basket</h3>
+                        <p>Basketball team training and competitions</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏐</div>
+                        <h3>Voli</h3>
+                        <p>Volleyball team practice and tournaments</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">⚽</div>
+                        <h3>Futsal</h3>
+                        <p>Indoor football training and matches</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎯</div>
+                        <h3>Petanque</h3>
+                        <p>French boules sport for precision and strategy</p>
+                    </div>
+
+                    <h3 class="category-title">Social & Community Service</h3>
+                    <div class="activity-card">
+                        <div class="activity-icon">🌟</div>
+                        <h3>ROHIS</h3>
+                        <p>Islamic spiritual activities and community service</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏥</div>
+                        <h3>PMR</h3>
+                        <p>Youth Red Cross for first aid and humanitarian service</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">💕</div>
+                        <h3>PIK-R</h3>
+                        <p>Youth Information and Counseling Center</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases">
+            <h2>Perfect for Schools & UMKM in Indonesia</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Sistem Manajemen Sekolah</h3>
+                    <p>Kelola data siswa, nilai, dan kehadiran dengan mudah untuk SMK dan sekolah lainnya</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Laporan Keuangan UMKM</h3>
+                    <p>Pantau arus kas, stok, dan laporan penjualan untuk bisnis kecil menengah</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏪</div>
+                    <h3>Manajemen Inventaris</h3>
+                    <p>Kelola stok produk dan aset sekolah dalam satu dashboard yang terintegrasi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Akses Mobile</h3>
+                    <p>Akses sistem dari mana saja menggunakan smartphone atau tablet</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <h2>Success Stories</h2>
+            <div class="case-study-content">
+                <div class="case-study-image">
+                    <img src="https://smkn1punggelan.sch.id/assets/images/uploads/144/WhatsApp%20Image%202023-12-13%20at%2013.35.39.jpeg" alt="SMKN 1 Punggelan TEFA Workshop" class="study-img">
+                    <div class="fallback-icon">🏫</div>
+                </div>
+                <div class="case-study-text">
+                    <h3>SMKN 1 Punggelan - Digital Transformation Journey</h3>
+                    <p class="case-highlight">Leading Vocational Education with Modern Technology</p>
+                    <ul class="case-benefits">
+                        <li>✓ Successful implementation of Teaching Factory (TEFA) program</li>
+                        <li>✓ Integration of digital systems across 7 departments</li>
+                        <li>✓ Enhanced student learning through modern facilities</li>
+                        <li>✓ Active industry partnerships and collaborations</li>
+                    </ul>
+                    <a href="https://www.instagram.com/smkn1punggelan_official/?hl=en" class="btn primary">Follow Our Journey</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <h2>School Achievements</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Teaching Factory Excellence</h3>
+                    <p>Recognized for outstanding implementation of industry-standard practices in vocational education</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Industry Partnerships</h3>
+                    <p>Strong collaborations with leading companies ensuring relevant skill development</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Student Success</h3>
+                    <p>High employment rate and successful entrepreneurship among graduates</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Innovation Hub</h3>
+                    <p>Center for technological advancement in vocational education</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="org-slider-section">
+            <div class="org-slider-container">
+                <div class="org-slider-header">
+                    <h2>Our Partner Organizations</h2>
+                    <p>Collaborating with leading institutions for student success</p>
+                </div>
+                <div class="org-slider">
+                    <div class="org-slide">
+                        <div class="org-logo">
+                            <img src="https://example.com/org1.png" alt="Organization 1">
+                            <span>Partner 1</span>
+                        </div>
+                        <div class="org-logo">
+                            <img src="https://example.com/org2.png" alt="Organization 2">
+                            <span>Partner 2</span>
+                        </div>
+                    </div>
+                    <div class="org-slide">
+                        <div class="org-logo">
+                            <img src="https://example.com/org3.png" alt="Organization 3">
+                            <span>Partner 3</span>
+                        </div>
+                        <div class="org-logo">
+                            <img src="https://example.com/org4.png" alt="Organization 4">
+                            <span>Partner 4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="org-slider-nav">
+                    <div class="org-slider-dot active"></div>
+                    <div class="org-slider-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-proof">
+            <h2>Follow Our Journey</h2>
+            <p class="social-subtitle">Stay updated with our latest activities and achievements</p>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/smkn1punggelan_official/?hl=en" class="social-card">
+                    <div class="social-icon">📸</div>
+                    <h3>@smkn1punggelan_official</h3>
+                    <p>Follow us on Instagram for daily updates and behind-the-scenes content</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of developers building amazing admin panels with Filament</p>
+                <a href="#install" class="btn primary">Install Filament</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Filament</h4>
+                <p>Modern Admin Panel Framework for Laravel</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <a href="#">Documentation</a>
+                <a href="#">GitHub</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Community</h4>
+                <a href="#">Discord</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Filament. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="achievements.js"></script>
+    <script src="organization-slider.js"></script>
+    <script src="extracurricular.js"></script>
+</body>
+</html>

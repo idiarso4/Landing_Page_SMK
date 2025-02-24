@@ -1,0 +1,146 @@
+/* Slider Section Styles */
+.slider-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    text-align: center;
+}
+
+.slide-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slide-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slider-dot.active {
+    background: white;
+}
+
+/* School Info Section Styles */
+.school-info {
+    padding: 4rem 2rem;
+    background: #f8fafc;
+}
+
+.school-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.school-info-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.school-info-header h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.school-info-header p {
+    color: #6b7280;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.school-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.info-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .slider-section {
+        height: 400px;
+    }
+
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .school-info-header h2 {
+        font-size: 2rem;
+    }
+
+    .school-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
